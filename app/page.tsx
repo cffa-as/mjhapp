@@ -158,7 +158,7 @@ export default function Component() {
         <div className="text-center space-y-2">
           <h1 className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent flex items-center justify-center gap-2">
             <Sparkles className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600" />
-            梦江湖成圣进度计算器
+            成圣计算器
           </h1>
           <p className="text-sm sm:text-base text-gray-600">精确计算你的成圣之路</p>
         </div>
@@ -476,7 +476,7 @@ export default function Component() {
                           setWeeklyActivities(newActivities)
                         }}
                         placeholder="活动名称"
-                        className="border-0 bg-transparent focus:bg-white h-10"
+                        className="border-0 bg-transparent focus:bg-white h-10 w-28"
                       />
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
@@ -490,7 +490,7 @@ export default function Component() {
                               setWeeklyActivities(newActivities)
                             }}
                             placeholder="0"
-                            className="w-20 text-center h-10"
+                            className="w-16 text-center h-10"
                           />
                           <span className="text-sm text-gray-500">碎片</span>
                         </div>
@@ -505,7 +505,7 @@ export default function Component() {
                               setWeeklyActivities(newActivities)
                             }}
                             placeholder="0"
-                            className="w-20 text-center h-10"
+                            className="w-16 text-center h-10"
                           />
                           <span className="text-sm text-gray-500">规则</span>
                         </div>

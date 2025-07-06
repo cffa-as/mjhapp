@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.cffa.mjhapp',
-  appName: 'MJH App',
+  appName: '成圣计算器',
   webDir: 'out',
   server: {
     androidScheme: 'https'

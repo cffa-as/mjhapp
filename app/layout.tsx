@@ -14,7 +14,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body style={{
+        paddingTop: 'env(safe-area-inset-top, 16px)',
+        paddingBottom: 'env(safe-area-inset-bottom, 16px)',
+        minHeight: '100vh',
+        boxSizing: 'border-box',
+        background: '#fff',
+      }}>{children}</body>
     </html>
   )
 }
