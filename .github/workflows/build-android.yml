@@ -21,11 +21,10 @@ jobs:
         node-version: '20'
         cache: 'npm'
         
-    - name: Install, Build, Add Android, Sync
+    - name: Install, Build, Sync Android
       run: |
         npm install --legacy-peer-deps
         npm run build
-        npx cap add android
         npx cap sync android
       
     - name: Setup Java
