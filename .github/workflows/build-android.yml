@@ -21,17 +21,18 @@ jobs:
         node-version: '20'
         cache: 'npm'
         
-    - name: Install dependencies
-      run: npm install --legacy-peer-deps
-      
-    - name: Build Next.js app
-      run: npm run build
+    - name: Install, Build, Add Android, Sync
+      run: |
+        npm install --legacy-peer-deps
+        npm run build
+        npx cap add android
+        npx cap sync android
       
     - name: Setup Java
       uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
-        java-version: '17'
+        java-version: '21'
         
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
@@ -39,15 +40,10 @@ jobs:
     - name: Install Capacitor
       run: npm install @capacitor/core @capacitor/cli @capacitor/android --legacy-peer-deps
       
-    - name: Add Android platform
-      run: npx cap add android
-      
-    - name: Sync project
-      run: npx cap sync android
-      
     - name: Build APK
       run: |
         cd android
+        chmod +x gradlew
         ./gradlew assembleDebug
       env:
         ANDROID_HOME: ${{ env.ANDROID_SDK_ROOT }}
